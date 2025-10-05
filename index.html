@@ -7,22 +7,31 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="background"></div>
+
+  <div class="content">
+    <h1>JoJo Bizarre Adventure</h1>
+    <a href="https://tr.wikipedia.org/wiki/JoJo%27s_Bizarre_Adventure" target="_blank">Information</a>
+  </div>
+
   <header>
-    <h1>JoJo's Bizarre Adventure Universe</h1>
-    <p>Learn about the Joestars, Stands, and all the bizarre adventures!</p>
+    <h1>✨ JoJo's Bizarre Adventure Universe ✨</h1>
+    <p>Discover the Joestars, Stands, and all the bizarre adventures!</p>
   </header>
 
   <main>
     <section class="find-stand">
-      <h2>Find Your Stand</h2>
-      <button id="findStandBtn">🎯 Find Your Stand</button>
+      <h2>💥 Stab the Arrow 💥</h2>
+      
+      <!-- Text button instead of arrow image -->
+      <button id="findStandBtn" class="stand-button">Get Stand</button>
+
       <p id="standResult"></p>
+      <div id="standEffect" class="stand-effect"></div>
     </section>
   </main>
 
-  <footer>
-    <p>Made with ❤️ by a JoJo fan.</p>
-  </footer>
+
 
   <script src="script.js"></script>
 </body>
