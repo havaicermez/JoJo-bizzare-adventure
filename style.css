@@ -1,32 +1,146 @@
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #1a1a1a;
-  color: #f8f8f8;
-  text-align: center;
+/* Reset & Fonts */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
+/* Background image */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://uploads.onecompiler.io/43bfyb79e/43yqqrpt4/385829.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Header */
 header {
-  background-color: #6c43a2;
-  padding: 20px 0;
+  text-align: center;
+  padding: 2rem;
+  text-shadow: 2px 2px #000;
 }
 
-button {
-  background-color: #ffcc00;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1.2em;
+header h1 {
+  font-size: 3rem;
+  animation: swing 2s infinite alternate;
+}
+
+@keyframes swing {
+  0% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  100% { transform: rotate(-5deg); }
+}
+
+header p {
+  font-size: 1.3rem;
+  color: #fff;
+  text-shadow: 1px 1px #000;
+}
+
+/* Main Section */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.find-stand {
+  background: rgba(0,0,0,0.6);
+  border: 3px solid #fff;
+  border-radius: 25px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 0 30px #ff0080, 0 0 60px #00ffe0;
+  animation: glow 3s infinite alternate;
+  position: relative;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 30px #ff0080, 0 0 60px #00ffe0; }
+  50% { box-shadow: 0 0 50px #ffea00, 0 0 80px #ff0080; }
+  100% { box-shadow: 0 0 30px #ff0080, 0 0 60px #00ffe0; }
+}
+
+.find-stand h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+}
+
+/* Stand button */
+.stand-button {
+  font-size: 1.2rem;
+  padding: 0.5rem 1.2rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
   cursor: pointer;
-  border-radius: 8px;
+  text-shadow: 1px 1px #000;
+  transition: all 0.3s ease;
 }
 
-button:hover {
-  background-color: #ffd633;
+.stand-button:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.1);
 }
 
+/* Stand result */
+#standResult {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+  margin-top: 1rem;
+  animation: appear 0.5s ease-in-out;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Stand effect */
+.stand-effect {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  width: 100px; height: 100px;
+  background: radial-gradient(circle, #fff 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translateX(-50%) scale(0);
+  pointer-events: none;
+}
+
+@keyframes glowEffect {
+  0% { transform: translateX(-50%) scale(0); opacity: 1; }
+  50% { transform: translateX(-50%) scale(1.5); opacity: 0.7; }
+  100% { transform: translateX(-50%) scale(0); opacity: 0; }
+}
+
+/* Footer */
 footer {
-  margin-top: 50px;
-  font-size: 0.9em;
-  color: #999;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0,0,0,0.4);
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: 1px 1px #000;
 }
